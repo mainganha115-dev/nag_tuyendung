@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Naga ERP — Module Tuyển dụng</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ SINGLE NAV BAR (Odoo / Naga ERP style) ============ -->
+<nav class="app-nav">
+  <div class="nav-brand">
+    <button class="nav-icon-btn" id="btnAppGrid" title="Ứng dụng">
+      <svg viewBox="0 0 24 24" width="18" height="18"><rect x="3" y="3" width="7" height="7" rx="1" fill="currentColor"/><rect x="14" y="3" width="7" height="7" rx="1" fill="currentColor"/><rect x="3" y="14" width="7" height="7" rx="1" fill="currentColor"/><rect x="14" y="14" width="7" height="7" rx="1" fill="currentColor"/></svg>
+    </button>
+    <span class="brand-square">N</span>
+    <span class="brand-text">Naga ERP</span>
+  </div>
+
+  <div class="nav-menu" id="appMenubar">
+    <a href="#/dashboard"        class="nav-item" data-route="dashboard">Dashboard</a>
+    <a href="#/job-list"         class="nav-item" data-route="job-list">Tin tuyển dụng</a>
+    <a href="#/candidate-list"   class="nav-item" data-route="candidate-list">Datapool ứng viên</a>
+    <a href="#/pipeline"         class="nav-item" data-route="pipeline">Quy trình tuyển dụng</a>
+    <a href="#/interview-list"   class="nav-item" data-route="interview-list">Lịch phỏng vấn</a>
+    <a href="#/interview-result" class="nav-item" data-route="interview-result">Kết quả phỏng vấn</a>
+    <a href="#/headcount"        class="nav-item" data-route="headcount">Định biên tuyển dụng</a>
+
+    <div class="nav-dropdown">
+      <span class="nav-item nav-item-dd" id="ddReports">Báo cáo <span class="dd-caret">▾</span></span>
+      <div class="nav-dd-menu" id="ddReportsMenu">
+        <a href="#/report-monthly"   class="nav-dd-item" data-route="report-monthly">📅 Báo cáo theo tháng</a>
+        <a href="#/report-dept"      class="nav-dd-item" data-route="report-dept">🏢 Báo cáo theo phòng ban</a>
+        <a href="#/report-source"    class="nav-dd-item" data-route="report-source">📡 Báo cáo theo nguồn ứng viên</a>
+        <a href="#/report-funnel"    class="nav-dd-item" data-route="report-funnel">🔽 Phễu tuyển dụng</a>
+        <a href="#/report-headcount" class="nav-dd-item" data-route="report-headcount">🧮 Báo cáo định biên</a>
+      </div>
+    </div>
+
+    <div class="nav-dropdown">
+      <span class="nav-item nav-item-dd" id="ddConfig">Cấu hình <span class="dd-caret">▾</span></span>
+      <div class="nav-dd-menu" id="ddConfigMenu">
+        <a href="#/email-templates"  class="nav-dd-item" data-route="email-templates">✉️ Email Template <span class="nav-code">REC-09</span></a>
+        <a href="#/workflow-config"  class="nav-dd-item" data-route="workflow-config">🔁 Cấu hình Workflow <span class="nav-code">REC-10</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="nav-right">
+    <button class="nav-icon-btn" id="btnOverview" title="Tổng quan module (DEV)">
+      <svg viewBox="0 0 24 24" width="17" height="17"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 5v6m0 4h.01" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+    </button>
+    <button class="nav-icon-btn" id="btnNotif" title="Thông báo" style="position:relative;">
+      <svg viewBox="0 0 24 24" width="17" height="17"><path d="M18 8a6 6 0 10-12 0c0 7-3 9-3 9h18s-3-2-3-9M13.7 21a2 2 0 01-3.4 0" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="notif-dot"></span>
+    </button>
+    <span class="nav-avatar">HN</span>
+  </div>
+</nav>
+
+<!-- ============ MAIN CONTENT ============ -->
+<main class="main-content" id="viewRoot"></main>
+
+<!-- ============ MODAL ROOT ============ -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal-box" id="modalBox"></div>
+</div>
+
+<!-- ============ TOOLTIP POPOVER ============ -->
+<div class="dev-popover" id="devPopover"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
